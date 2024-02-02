@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Swanandi Deshmukh - Resumeflix</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Additional Styles */
+    body {
+      background: #000;
+      color: #fff;
+      font-weight: 500;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: space-around;
+      background-color: #141414;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .tab {
+      padding: 15px;
+      cursor: pointer;
+      color: #fff;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .tab:hover {
+      background-color: #e50914;
+    }
+
+    .card {
+      background-color: #141414;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      margin-bottom: 20px;
+      text-align: left;
+      display: none;
+    }
+
+    .card h2 {
+      color: #e50914;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      margin: 0 0 10px 0;
+    }
+
+    .contact p {
+      margin: 5px 0;
+    }
+
+    .contact a {
+      color: #e50914;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    .skills-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skills-list li {
+      background-color: #e50914;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="tabs">
+      <a href="#" class="tab" onclick="showContent('skills')">Skills</a>
+      <a href="#" class="tab" onclick="showContent('achievements')">Achievements</a>
+      <a href="#" class="tab" onclick="showContent('connect')">Connect</a>
+    </div>
+
+    <div class="card" id="skills">
+      <h2>Featured Skills:</h2>
+      <ul class="skills-list">
+        <li>Java</li>
+        <li>JavaScript</li>
+        <li>Machine Learning</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Github</li>
+        <li>React.js</li>
+        <li>C++</li>
+        <li>C</li>
+        <li>Python</li>
+        <li>Team Leadership</li>
+        <li>Communication</li>
+        <li>Software Engineering</li>
+        <li>Ethical Hacking</li>
+        <li>Database Management</li>
+      </ul>
+    </div>
+
+    <div class="card" id="achievements">
+      <h2>Achievements:</h2>
+      <ul>
+        <li>Paper Presentation in Tuljapur Government Engineering College in 2023</li>
+        <li>Solapur Singhgad College Project Competition Winner</li>
+        <li>Poster Presentation in Barshi MIT College</li>
+        <li>Project Competition in Terna College of Engineering Osmanabad</li>
+      </ul>
+    </div>
+
+    <div class="card" id="connect">
+      <h2>Connect:</h2>
+      <div class="contact">
+        <p>Instagram: <a href="https://www.instagram.com/hi.swanandi._here/" target="_blank">hi.swanandi._here</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/swanandi-deshmukh-977a07271/" target="_blank">Swanandi Deshmukh</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showContent(contentId) {
+      // Hide all cards
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(card => card.style.display = 'none');
+
+      // Show the selected card
+      const selectedCard = document.getElementById(contentId);
+      selectedCard.style.display = 'block';
+    }
+  </script>
+</body>
+
+</html>
